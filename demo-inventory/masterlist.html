@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>AsyrafSumail - Iventory</title>
+    <title>AsyrafSumail - Inventory</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -38,14 +38,14 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-box-open"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Iventory <sup></sup></div>
+                <div class="sidebar-brand-text mx-3">Inventory <sup></sup></div>
             </a>
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item ">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-search"></i>
                     <span>Search</span></a>
@@ -65,7 +65,7 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
-			<li class="nav-item">
+			<li class="nav-item active">
                 <a class="nav-link" href="masterlist.html">
                     <i class="fas fa-fw fa-list-alt"></i>
                     <span>Masterlist</span></a>
@@ -162,8 +162,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Search Equipment</h1>
-                       
+                        <h1 class="h3 mb-0 text-gray-800">Equipment Masterlist</h1>
                     </div>
 
                     <!-- Content Row -->
@@ -172,17 +171,7 @@
 						<div class="col-xl-12 col-lg-12">
 							<div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-								<div class="input-group">
-									<input type="text" class="form-control border-0 small" placeholder="Search for..."
-										aria-label="Search" aria-describedby="basic-addon2">
-									<div class="input-group-append">
-										<button class="btn btn-primary" type="button">
-											<i class="fas fa-search fa-sm"></i>
-										</button>
-									</div>
-								</div>
-							</form>
+                            
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -196,7 +185,11 @@
                                             <th>Brand</th>
 											<th>Location</th>
                                             <th>Stock Balance</th>
-											<th> </th>
+											<th style="text-align: center">
+												<a href="#" data-toggle="modal" data-target="#"class="btn btn-info btn-circle btn-sm">
+													<i class="fa fa-plus"></i>
+												</a>
+											</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -212,6 +205,12 @@
 												<a href="#" data-toggle="modal" data-target="#detailProduct"class="btn btn-primary btn-circle btn-sm">
 													<i class="fa fa-eye"></i>
 												</a>
+												<a href="#" data-toggle="modal" data-target="#detailProduct"class="btn btn-warning btn-circle btn-sm">
+													<i class="fa fa-edit"></i>
+												</a>
+												<a href="#" data-toggle="modal" data-target="#deleteProduct"class="btn btn-danger btn-circle btn-sm">
+													<i class="fa fa-trash"></i>
+												</a>
 											</td>
                                         </tr>
                                         <tr>
@@ -226,6 +225,12 @@
 												<a href="#" data-toggle="modal" data-target="#detailProduct"class="btn btn-primary btn-circle btn-sm">
 													<i class="fa fa-eye"></i>
 												</a>
+												<a href="#" data-toggle="modal" data-target="#detailProduct"class="btn btn-warning btn-circle btn-sm">
+													<i class="fa fa-edit"></i>
+												</a>
+												<a href="#" data-toggle="modal" data-target="#deleteProduct"class="btn btn-danger btn-circle btn-sm">
+													<i class="fa fa-trash"></i>
+												</a>
 											</td>
                                         </tr>
                                         <tr>
@@ -239,6 +244,12 @@
 											<td style="text-align: center">
 												<a href="#" data-toggle="modal" data-target="#detailProduct"class="btn btn-primary btn-circle btn-sm">
 													<i class="fa fa-eye"></i>
+												</a>
+												<a href="#" data-toggle="modal" data-target="#detailProduct"class="btn btn-warning btn-circle btn-sm">
+													<i class="fa fa-edit"></i>
+												</a>
+												<a href="#" data-toggle="modal" data-target="#deleteProduct"class="btn btn-danger btn-circle btn-sm">
+													<i class="fa fa-trash"></i>
 												</a>
 											</td>
                                         </tr>
@@ -294,6 +305,26 @@
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                     <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	<!-- Delete Modal-->
+    <div class="modal fade" id="deleteProduct" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Remove this equipment?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Remove" below if you are sure to remove this equipment from Inventory.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" data-dismiss="modal">Remove</a>
                 </div>
             </div>
         </div>
